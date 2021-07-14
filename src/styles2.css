@@ -1,0 +1,261 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.app__wrapper {
+  background-color: whitesmoke;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.app__logo {
+  grid-area: 1 / 1 / 2 / 11;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.app__image--container {
+  grid-area: 2 / 1 / 6 / 11;
+}
+
+.app__image {
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.app__text {
+  grid-area: 6 / 1 / 9 / 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__title {
+  font-size: 6vh;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: 1vh;
+  margin: 0 0 3% 0;
+  font-weight: 600;
+}
+
+.app__title::first-line {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+.app__paragraph {
+  font-size: 2.1vh;
+  font-weight: 400;
+  text-align: center;
+  margin: 1% 8%;
+  color: hsl(0, 36%, 70%);
+}
+
+.app__input--container {
+  grid-area: 9 / 1 / 11 / 11;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10%;
+}
+
+.app__input {
+  max-width: 70vw;
+  height: 7vh;
+  padding: 4% 0 4% 6%;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  flex: 1 1 auto;
+}
+
+.app__input::placeholder {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.app__input--button {
+  background: hsl(0, 36%, 70%);
+  width: 17vw;
+  margin-left: -17vw;
+  height: 7vh;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.app__input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 420px) {
+  .app__wrapper {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    min-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .app__background {
+    grid-area: 1 / 1 / 11 / 7;
+    background: url("./images/bg-pattern-desktop.svg") no-repeat fixed white;
+    background-size: 60% 100%;
+  }
+
+  .app__logo {
+    grid-area: 2 / 2 / 3 / 6;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .app__image--container {
+    grid-area: 1 / 7 / 11 / 11;
+    background: url("./images/hero-desktop.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  .app__image {
+    display: none;
+  }
+
+  .app__text {
+    grid-area: 4 / 2 / 9 / 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app__title {
+    font-size: 8vh;
+    text-align: start;
+    line-height: 1.1;
+    letter-spacing: 2vh;
+    margin: 0 0 3% 0;
+    font-weight: 600;
+  }
+
+  .app__title::first-line {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+  }
+
+  .app__paragraph {
+    font-size: 2.2vh;
+    font-weight: 400;
+    text-align: start;
+    line-height: 1.8;
+    margin: 3% 0;
+    color: hsl(0, 36%, 70%);
+    width: 80%;
+    min-width: 350px;
+  }
+
+  .app__input--container {
+    grid-area: 9 / 2 / 10 / 6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 3%;
+    padding-bottom: 10%;
+    width: 80%;
+  }
+
+  .app__input {
+    max-width: 70vw;
+    height: 7vh;
+    padding: 4% 0 4% 6%;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    flex: 1 1 auto;
+  }
+
+  .app__input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-size: 2vh;
+    font-weight: 300;
+  }
+
+  .app__input--button {
+    background: hsl(0, 36%, 70%);
+    width: 7vw;
+    margin-left: -7vw;
+    height: 7vh;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  .app__input:focus {
+    outline: none;
+  }
+}
