@@ -69,25 +69,50 @@ select {
 .app__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100vw;
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: rgb(250, 226, 230);
 }
-.app__logo {
-  margin: 8%;
+
+.app__header {
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid orange; */
+  flex: 5 5 auto;
+}
+
+.app__logo--container {
+  vertical-align: middle;
+  padding: 4vh 4vh;
+}
+
+.app__image--container {
+  flex: 3 3 auto;
+}
+
+.app__image {
+  max-width: 100%;
+  height: 90%;
+  max-height: 100%;
+  display: block;
 }
 
 .app__title {
-  margin: 10% 0 5% 0;
-  font-size: 3rem;
+  /* border: 2px solid purple; */
+  padding: 14% 0 0 0;
+  font-size: 12vw;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  letter-spacing: 5px;
+  letter-spacing: 0.5rem;
   line-height: 1.1;
   font-weight: 600;
   color: hsl(0, 6%, 24%);
+  height: 25%;
+  flex: 2 2 auto;
 }
 
 .app__title1 {
@@ -96,28 +121,32 @@ select {
 }
 
 .app__paragraph {
-  margin: 0 10%;
-  font-size: 1rem;
+  padding: 2% 8% 5% 8%;
+  font-size: 4.5vw;
   text-align: center;
   color: hsl(0, 36%, 70%);
+  height: 20%;
+  /* border: 2px solid green; */
+  flex: 2 2 auto;
 }
 
 .app__input--container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px;
-  margin: 1% 10% 10% 10%;
+  padding: 5%;
+  height: 10vh;
+  margin: 0 0 10% 0;
+  /* border: 2px solid blue; */
 }
 
 .app__input {
-  margin: 10% 0;
-  width: 300px;
-  height: 50px;
+  max-width: 70vw;
+  height: 7vh;
   padding: 4% 0 4% 6%;
   border-radius: 25px;
   background-color: whitesmoke;
-  flex-grow: 2;
+  flex: 1 1 auto;
 }
 
 .app__input::placeholder {
@@ -126,9 +155,9 @@ select {
 
 .app__input--button {
   background: hsl(0, 36%, 70%);
-  width: 22%;
-  margin-left: -22%;
-  height: 50px;
+  width: 17vw;
+  margin-left: -17vw;
+  height: 7vh;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -138,4 +167,109 @@ select {
 
 .app__input:focus {
   outline: none;
+}
+
+@media screen and (min-width: 420px) {
+  .app__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(250, 226, 230);
+  }
+
+  .app__header {
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid orange; */
+    flex: 5 5 auto;
+  }
+
+  .app__logo--container {
+    vertical-align: middle;
+    padding: 4vh 4vh;
+  }
+
+  .app__image--container {
+    flex: 3 3 auto;
+  }
+
+  .app__image {
+    max-width: 100%;
+    height: 90%;
+    max-height: 100%;
+    display: block;
+  }
+
+  .app__title {
+    /* border: 2px solid purple; */
+    padding: 14% 0 0 0;
+    font-size: 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    letter-spacing: 0.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: hsl(0, 6%, 24%);
+    height: 25%;
+    flex: 2 2 auto;
+  }
+
+  .app__title1 {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+  }
+
+  .app__paragraph {
+    padding: 2% 8% 5% 8%;
+    font-size: 4.5vw;
+    text-align: center;
+    color: hsl(0, 36%, 70%);
+    height: 20%;
+    /* border: 2px solid green; */
+    flex: 2 2 auto;
+  }
+
+  .app__input--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    height: 10vh;
+    margin: 0 0 10% 0;
+    /* border: 2px solid blue; */
+  }
+
+  .app__input {
+    max-width: 70vw;
+    height: 7vh;
+    padding: 4% 0 4% 6%;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    flex: 1 1 auto;
+  }
+
+  .app__input::placeholder {
+    color: hsl(0, 36%, 70%);
+  }
+
+  .app__input--button {
+    background: hsl(0, 36%, 70%);
+    width: 17vw;
+    margin-left: -17vw;
+    height: 7vh;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  .app__input:focus {
+    outline: none;
+  }
 }

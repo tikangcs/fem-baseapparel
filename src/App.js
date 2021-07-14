@@ -4,20 +4,26 @@ export default function App() {
   return (
     <div className="app__wrapper">
       <div className="app__container">
-        <img
-          src="./images/logo.svg"
-          alt="company logo"
-          width="150px"
-          height="30px"
-          className="app__logo"
-        />
-        <img
-          src="./images/hero-mobile.jpg"
-          alt="female model touching hair"
-          width="100%"
-          height="35%"
-          className="app__image"
-        />
+        <div className="app__header">
+          <div className="app__logo--container">
+            <img
+              src="./images/logo.svg"
+              alt="company logo"
+              width="40%"
+              height="100%"
+              className="app__logo"
+            />
+          </div>
+          <div className="app__image--container">
+            <img
+              src="./images/hero-mobile.jpg"
+              alt="female model touching hair"
+              width="100%"
+              height="100%"
+              className="app__image"
+            />
+          </div>
+        </div>
         <div className="app__title">
           <div className="app__title1">WE'RE</div>
           <div>COMING</div>
